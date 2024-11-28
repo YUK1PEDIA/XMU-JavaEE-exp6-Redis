@@ -4,11 +4,12 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable; // 导入 Serializable 接口
 import java.time.LocalDateTime;
 
 @Data
 @NoArgsConstructor
-public class OnSale {
+public class OnSale implements Serializable {
 
     private Long id;
 

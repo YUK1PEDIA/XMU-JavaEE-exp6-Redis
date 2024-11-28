@@ -15,6 +15,15 @@ server:
       min-spare: 50
 
 spring:
+  data:
+    redis:
+      port: 6379
+      host: redis
+      password: Yukipedia1234
+
+
+
+
   datasource:
     #JDBC驱动
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -53,12 +62,12 @@ spring:
     time-zone: GMT+8
 
   #开启 JPA 的 sql-log 输出
-  jpa:
-    show-sql: true
-    properties:
-      hibernate:
-        format_sql: true
-        use_sql_comments: true
+#  jpa:
+#    show-sql: true
+#    properties:
+#      hibernate:
+#        format_sql: true
+#        use_sql_comments: true
 
   logging:
     level:

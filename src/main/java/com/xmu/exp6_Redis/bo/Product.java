@@ -4,6 +4,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable; // 导入 Serializable 接口
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,12 +14,14 @@ import java.util.List;
  */
 @Data
 @NoArgsConstructor
-public class Product {
+public class Product implements Serializable {
+//    private static final long serialVersionUID = 1L; // 序列化ID
+
     private Long id;
 
-    private List<Product> otherProduct = new ArrayList<>();
+    private List<Product> otherProduct = new ArrayList<>(); // 确保 Product 对象中的 Product 也是 Serializable
 
-    private List<OnSale> onSaleList = new ArrayList<>();
+    private List<OnSale> onSaleList = new ArrayList<>(); // OnSale 也需要是 Serializable，否则会抛出异常
 
     private String skuSn;
 
