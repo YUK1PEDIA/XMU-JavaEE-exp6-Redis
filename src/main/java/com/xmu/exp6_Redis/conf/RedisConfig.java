@@ -5,7 +5,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisPassword;
 import org.springframework.data.redis.connection.RedisStandaloneConfiguration;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
 
@@ -30,9 +29,4 @@ public class RedisConfig {
         return redisTemplate;
     }
 
-    // 配置 StringRedisTemplate
-//    @Bean
-//    public StringRedisTemplate stringRedisTemplate(RedisConnectionFactory redisConnectionFactory) {
-//        return new StringRedisTemplate(redisConnectionFactory);
-//    }
 }
